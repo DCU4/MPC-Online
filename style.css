@@ -1,0 +1,113 @@
+
+html {
+	font-family: 'Avenir', sans-serif;
+
+	}
+body {
+
+	background: url(wood.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: scroll;
+
+	display: flex;
+	justify-content: center;
+	
+}
+
+
+.container {
+	background-color: #333;
+	width:700px;
+	height: 610px;
+	border-radius: 4px;
+	box-shadow:0px 8px 0.1px 10px #222;
+
+	display: grid;
+	
+	align-items: center; 	
+	grid-template-rows: 100px 100px 400px; /*across*/
+	grid-template-columns: 150px 200px 200px 150px;
+	grid-template-areas: 
+		"header . recording recording"
+		". display display ."
+		"left grid grid right";
+
+}
+
+.container h1 {
+	grid-area: header;
+	width:290px;
+	margin: 10px;
+	font-size: 4rem;
+	text-shadow: -.5px .5px .5px 1px rgba(0,0,0,.5);
+
+
+}
+
+.recording {
+	grid-area: recording;
+
+	height: 50px;
+	background-color:#555;
+	margin: 10px;
+	box-shadow:-.5px .5px .5px 1px rgba(0,0,0,.5);
+
+}
+
+.display {
+	grid-area: display;
+	justify-self:center;
+	width: 400px;
+	height:50px;
+	background-color: green;
+	margin:20px;
+}
+
+
+
+.grid {
+	grid-area: grid;
+	justify-self:center;
+
+	display: grid;
+	background-color: #555;
+	width: 400px;
+	height: 400px;
+	margin:10px;
+	grid-template-rows: repeat(4, 70px);
+	grid-template-columns: repeat(4, 70px);
+	grid-gap:30px;
+	box-shadow:-.5px .5px .5px 1px rgba(0,0,0,.5);
+	justify-content: center;
+	align-content: center;
+
+}
+
+.pad {
+	background-color: #222;	
+	border-radius: 1px;
+	box-shadow:-.8px .8px .1px 2px #111;
+}
+
+
+.pad-down {
+	box-shadow:-.5px 0px 0px 1px #111;
+}
+
+.left {
+	grid-area: left;
+
+}
+.right {
+	grid-area: right;
+}
+
+.left, .right {
+	height: 400px;
+	background-color:#555;
+	margin: 20px;
+	box-shadow:-.5px .5px .5px 1px rgba(0,0,0,.5);
+}
+
