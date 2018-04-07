@@ -40,8 +40,13 @@ function padDown(e){
 
 function listAudio() {
 	//loop through audio and add baseurl to it
-	audio.forEach(function(i,a){
+	audio.forEach(function(a,i){
 		console.log(new Audio(baseUrl + audio[a]));
-		return new Audio(baseUrl + audio[a]);
+		
+		var audList = [];
+		audList = [a,i];
+			audList.forEach(function(x,y){
+				console.log(x,y);
+			})
 	})
 }
