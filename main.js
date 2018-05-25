@@ -1,25 +1,27 @@
 var baseUrl = "./Neptunes Kit 1/";
 var audio = ["N1S11.wav", "N1S11reversed.wav","N3S25.wav", "N4K8.wav","N4P4.wav","N4P8.wav","N9K28.wav","N9P23.wav"];
 var padNum = [49,50,51,52, 81,87,69,82, 65,83,68,70, 90,88,67,86];
+var pad = document.querySelectorAll('.pad');
+var verb = document.querySelector('.reverb');
+var dist = document.querySelector('.distort');
+
 
 
 
 $(document).ready(function(){
-	$(document).on('keydown keyup', function(e){
-		
-	padDown(e);
-
+	$(document).on('keydown keyup', function(e){		
+		padDown(e);
 	});
-
-	$(document).on('keydown', function(event){
-		
-	playAudio(event);
-
+	$(document).on('keydown', function(event){		
+		playAudio(event);
 	});  
-
-	
-})
-
+	$(verb).on('click', function(){
+		$(verb).toggleClass('on');
+	});
+	$(dist).on('click', function(){
+		$(dist).toggleClass('on');
+	});
+});
 
 
 function padDown(e){
@@ -37,7 +39,6 @@ function playAudio(event){
 		keyData[event.key].sound.play();
 	}
 }
-
 
 var keyData = {
 	1: {
