@@ -48,6 +48,9 @@ body {
 
 .recording {
 	grid-area: recording;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 
 	height: 50px;
 	background-color:#555;
@@ -98,10 +101,44 @@ body {
 
 .left {
 	grid-area: left;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
+.left h2 {
+	margin-bottom: 0;
+}
+
+.left h3 {
+	font-weight: 300;
+}
+.high, .mid, .low {
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	background: #222;
+	box-shadow:-.8px .8px .1px 2px #111;
 }
 .right {
 	grid-area: right;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.right h2 {
+	margin-bottom: 0;
+}
+
+.right h3 {
+	font-weight: 300;
+}
+
+.reverb, .delay, .distort {
+	width: 40px;
+	height: 40px;
+	background: #222;
+	box-shadow:-.8px .8px .1px 2px #111;
 }
 
 .left, .right {
@@ -110,4 +147,12 @@ body {
 	margin: 20px;
 	box-shadow:-.5px .5px .5px 1px rgba(0,0,0,.5);
 }
+
+
+/*Effects*/
+
+.on {
+	box-shadow:-.5px 0px 0px 1px lightblue;
+}
+
 
